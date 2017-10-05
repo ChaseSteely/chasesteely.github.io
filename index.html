@@ -1,19 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
-        <title>Welcome to my personal site</title>
+        <title>Chase Steely</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Chase Steely">
+        <meta name="description" content="This website is the personal website of Marshall Chase Steely and describes his desire to work in IT as a software developer. Chase
+        is a graduate of college who studied computer programming and is attending Nashville Software school as a full stack web developer focusing on C# and .Net. Chase also has
+        is equipeed with CSS, HTML, Java, and JavaScript skills.">
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Chase Steely" />
+        <meta property="og:type" content="personal website" />
+        <meta property="og:url" content="http://www.chasesteely.com/" />
+        <meta property="og:image" content="chaseOne.jpg" />
+        <meta property="og:description" content="This website is the personal website of Marshall Chase Steely and describes his desire to work in IT as a software developer. Chase
+        is a graduate of college who studied computer programming and is attending Nashville Software school as a full stack web developer focusing on C# and .Net. Chase also has
+        is equipeed with CSS, HTML, Java, and JavaScript skills." />
+        <meta itemprop="name" content="Chase Steely">
+        <meta itemprop="description" content="This website is the personal website of Marshall Chase Steely and describes his desire to work in IT as a software developer. Chase
+        is a graduate of college who studied computer programming and is attending Nashville Software school as a full stack web developer focusing on C# and .Net. Chase also has
+        is equipeed with CSS, HTML, Java, and JavaScript skills.">
+        <meta itemprop="image" content="chaseOne.jpg">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="shortcut icon" href="bartender.ico" type="image/x-icon">
+        <link rel="stylesheet" href="normalize.css">
         <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-        <h1>I'm a student in NSS Cohort 22.</h1>
-        <article id="intro" class="article">
-            I'm Chase, and I am studying to become a full-stack developer.
-        </article>
 
-        <article id="history" class="article">
-            Previously I was an operator and I was born and raised in Nashville, TN.
-        </article>
+        <header id="header" class="top">
+            <nav class="nav" id="navBar">
+                <a href="#home" class="navItem button">HOME</a>
+                <a href="#about" class="navItem button "><i class="fa fa-user"></i> ABOUT</a>
+                <a href="#contact" class="navItem button"><i class="fa fa-envelope"></i> CONTACT</a>
+                <a href="#blog" class="navItem button"><i class="fa fa-pencil"></i> BLOG</a>
+                <a href="#projects" class="navItem button"><i class="fa fa-code"></i> PROJECTS</a>
+                <a href="#resume" class="navItem button"><i class="fa fa-briefcase"></i> RESUME</a>
+            </nav> 
+        </header>
+        <section class="imageOne" id="home">
+            <section class="name">
+                    <span class="nameBlock animate-opacity">CHASE STEELY</span>
+            </section>
+        </section>
+        <main class="content">
+
+        </main>
+        <section class="contact">
+
+        </section>
+        <footer id="footer" class="footer opacityOff">
+                <a href="#home" class="toTop"><i class="fa fa-arrow-up margin-right"></i>TOP OF PAGE</a>
+                <nav class="bottomNav">
+                        <a href="https://www.flickr.com/photos/mchasesteely/" target="_blank"><i class="fa fa-flickr hover-opacity"></i></a>
+                        <a href="https://github.com/ChaseSteely" target="_blank"><i class="fa fa-github hover-opacity"></i></a>
+                        <a href="https://www.linkedin.com/in/chasesteely/" target="_blank"><i class="fa fa-linkedin hover-opacity"></i></a>
+                </nav>
+        </footer>
     </body>
 
 </html>
