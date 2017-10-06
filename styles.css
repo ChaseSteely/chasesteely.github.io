@@ -85,3 +85,25 @@ body, h3 {
 opacity: 1;
 }
 
+.right {
+    margin-right: 12px;
+}
+
+.toTop {
+    padding: 18px 26px;
+    font-size: 18px;
+    color:#000;
+    background-color: #f1f1f1;
+
+
+}
+
+.pointer {
+    cursor: pointer;
+  }
+
+.bottomNav {
+    padding-top: 20px;
+    font-size:28px;
+}
+
