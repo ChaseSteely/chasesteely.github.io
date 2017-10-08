@@ -141,6 +141,17 @@ opacity: 1;
     opacity:0.75;
 }
 
+.imageThree {
+    background-image: url('resume.jpg');
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity:0.75;
+}
+
 .contact {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -157,5 +168,12 @@ opacity: 1;
     margin-top: 15px;
     font-size:24px;
     margin-bottom:16px;
+}
+
+.resPhoto {
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
