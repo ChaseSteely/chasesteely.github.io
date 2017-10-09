@@ -175,5 +175,9 @@ opacity: 1;
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	
 }
 
