@@ -163,17 +163,6 @@ opacity: 1;
     opacity:0.75;
 }
 
-.imageFive {
-    background-image: url('img/blog.jpg');
-    min-height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    opacity:0.75;
-}
-
 .contact {
     padding-top: 60px;
     padding-bottom: 60px;
