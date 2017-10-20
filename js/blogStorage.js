@@ -4,8 +4,7 @@ let blog1 = {
     "description": "FairyBnB Website",
     "author": "Chase Steely",
     "date": "10/18/17",
-    "content": "Today our groups presented our company website built over a two-day sprint. After an excellent planning phase, we settled on a company name - FairyBnB - and what service our company would provide - tours to mythical lands. Our group, the Distracted Llamas, went to the whiteboard to lay out our vision for the site. Each of us was responsible for creating a database, using JSON.stringify() and localStorage.setItem() to store the data in local storage. We would control and display our databases through JSON.parse(localStorage.getItem()), looping through our data, and writing all the HTML with innerHTML +=.",
-    "photoCode": ""
+    "content": "Today our groups presented our company website built over a two-day sprint. After an excellent planning phase, we settled on a company name - <a href='fairbnb.chasesteely.com'><nobr>FairyBnB</nobr></a> - and what service our company would provide - tours to mythical lands. Our group, the Distracted Llamas, went to the whiteboard to lay out our vision for the site. Each of us was responsible for creating a database, using JSON.stringify() and localStorage.setItem() to store the data in local storage. We would control and display our databases through JSON.parse(localStorage.getItem()), looping through our data, and writing all the HTML with innerHTML +=.",
 }
 
 let blog2 = {
