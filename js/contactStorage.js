@@ -1,11 +1,10 @@
 let contactInformation = {
-    "website": "<i class='fa fa-desktop pointer button' aria-hidden='true'></i> chaseteely.com",
-    "email": "<i class='fa fa-envelope pointer button' aria-hidden='true'></i> chaseteely@gmail.com",
-    "linkedIn": "<a href='https://www.linkedin.com/in/chasesteely/' target='_blank'><i class='fa fa-linkedin pointer button'></i></a>",
-    "github":"<a href='https://github.com/ChaseSteely'target='_blank'><i class='fa fa-github pointer button right'></i></a>",
-    "flickr": "<a href='https://www.flickr.com/photos/mchasesteely/' target='_blank'><i class='fa fa-flickr pointer button right'></i></a>",
+    "email": "chaseteely@gmail.com",
     "phone": "615-294-2338",
-    "location": "<i class='fa fa-phone pointer button' aria-hidden='true'></i> Nashville, TN"
+    "linkedIn": "<a href='https://www.linkedin.com/in/chasesteely/' target='_blank'><i class='fa fa-linkedin pointer button'></i></a>",
+    "github":"<a href='https://github.com/ChaseSteely'target='_blank'><i class='fa fa-github pointer button'></i></a>",
+    "flickr": "<a href='https://www.flickr.com/photos/mchasesteely/' target='_blank'><i class='fa fa-flickr pointer button'></i></a>",
+    "location": "Nashville, TN"
 }
 
 let contact = []
@@ -33,13 +32,14 @@ for (let key in ContactDatabase) {
         let item = thisContact[i]
 
         contactElement.innerHTML += `
-                <p>"${item.website}"</p>
-                <p>"${item.email}"</p>
-                <p>"${item.linkedIn}"</p>
-                <p>"${item.github}"</p>
-                <p>"${item.flickr}"</p>
-                <p>"${item.phone}"</p>
-                <p>"${item.location}"</p>
+                <p>${item.email}</p>
+                <p>${item.phone}</p>
+                    <div class="links">
+                        <p>${item.linkedIn}</p>
+                        <p>${item.github}</p>
+                        <p>${item.flickr}</p>
+                    </div>
+                <p>${item.location}</p>
                
         `
     }//end for loop
