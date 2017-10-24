@@ -2,6 +2,18 @@ body,h1,h2,h3,h4,h5 {
     font-family: "Lato", sans-serif;
 }
 
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+}
+
+a.blogPage{
+    font-size: 1.5em;
+}
+
 .w3-row {
     display: flex;
     flex-direction: row;
@@ -15,6 +27,7 @@ main {
 
 .content {
     width: 90%;
+    padding-bottom: 0px;
 }
 
 .imageFive {
@@ -37,6 +50,12 @@ hr {
     border:0;
     border-top:1px solid #eee;
     margin:20px 0
+}
+
+.paginator {
+    margin-bottom: 100px;
+    margin-top: 0px;
+
 }
 .w3-image{max-width:100%;height:auto}img{margin-bottom:-5px}a{color:inherit}
 
