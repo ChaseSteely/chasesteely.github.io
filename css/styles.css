@@ -146,30 +146,8 @@ opacity: 1;
     font-size:28px;
 }
 
-.imageTwo {
-    background-image: url('../img/chaseTwo.jpg');
-    min-height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    opacity:0.75;
-}
-
 .imageThree {
     background-image: url('../img/resume.jpg');
-    min-height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    opacity:0.75;
-}
-
-.imageFour {
-    background-image: url('../img/projects.jpg');
     min-height: 100%;
     background-attachment: fixed;
     background-position: center;

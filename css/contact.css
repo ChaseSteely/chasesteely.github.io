@@ -5,4 +5,17 @@ font-size: 55px;
 }
 .links p {
     margin-top: 0px;
+    padding: 10px;
+}
+
+.imageTwo {
+    background-image: url('../img/chaseTwo.jpg');
+    min-height: 75%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity:0.75;
+    object-fit: contain;
 }

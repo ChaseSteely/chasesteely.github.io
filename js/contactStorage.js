@@ -19,7 +19,7 @@ const contactInformationString = JSON.stringify(ContactData)
 localStorage.setItem("contactInformation", contactInformationString)
 
 const ContactDatabase = JSON.parse(localStorage.getItem("contactInformation"));
-const contactElement = document.getElementsByClassName("contactInfo")[0];
+const contactElement = document.getElementById("social-media-links");
 
 // Loop over keys in the database
 for (let key in ContactDatabase) {
@@ -32,13 +32,13 @@ for (let key in ContactDatabase) {
         let item = thisContact[i]
 
         contactElement.innerHTML += `
-                <p>${item.email}</p>
+                <p>${item.email}</a></p>
                 <p>${item.phone}</p>
-                    <div class="links">
+                    <article class="links">
                         <p>${item.linkedIn}</p>
                         <p>${item.github}</p>
                         <p>${item.flickr}</p>
-                    </div>
+                    </article>
                 <p>${item.location}</p>
                
         `

@@ -26,6 +26,7 @@
     <link rel="shortcut icon" href="img/bartender.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/projects.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108434151-1"></script>
@@ -38,12 +39,12 @@
     </script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({            
-'gtm.start':
-            new Date().getTime(), event: 'gtm.js'        
-}); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-57SKV4Z');</script>
     <!-- End Google Tag Manager -->
 </head>
@@ -84,21 +85,15 @@
         </nav>
     </header>
 
-    <section class="imageFour" id="projects">
+    <section class="imageFour">
         <section class="name">
             <span class="nameBlock center">PROJECTS</span>
         </section>
     </section>
 
+    <section id="projects" class="content">
 
-
-    <main>
-        <section class="content">
-            <h3 class="center">Projects Coming Soon</h3>
-        </section>
-    </main>
-
-
+    </section>
 
     <footer id="footer" class="footer opacityOff">
         <div class="up">
@@ -117,7 +112,8 @@
             </a>
         </nav>
     </footer>
-
+    <script src="js/projectStorage.js"></script>
+    <script src="js/projectsController.js"></script>
 </body>
 
 </html>
