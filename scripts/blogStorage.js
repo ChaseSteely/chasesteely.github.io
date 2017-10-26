@@ -83,7 +83,7 @@
         document.querySelector("input[name='blogForm__photo']").value,
         document.querySelector("input[name='blogForm__title']").value,
         document.querySelector("textarea[name='blogForm__body']").value,
-        document.querySelector("textarea[name='blogForm__date']").value
+        document.querySelector("input[name='blogForm__date']").value
       )
 
 
