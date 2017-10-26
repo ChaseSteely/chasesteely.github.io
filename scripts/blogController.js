@@ -1,5 +1,7 @@
-const totalItems = BlogDatabase.length
-const itemsPerPage = 1
+
+const BlogDatabase = JSON.parse(localStorage.getItem("BlogDatabase"))
+const totalItems = BlogDatabase.articles.length
+const itemsPerPage = 5
 const numberOfPages = Math.ceil(totalItems / itemsPerPage)
 const paginationEl = document.getElementById("blogPaginator")
 const blogEntry = document.getElementById("blogs");
@@ -74,7 +76,7 @@ function produceBlog(event) {
   }
 
   // Determine which items to display by slicing the array
-  const itemsToDisplay = BlogDatabase.slice(
+  const itemsToDisplay = BlogDatabase.articles.slice(
     (pageNumber - 1) * itemsPerPage,
     pageNumber * itemsPerPage
   )
@@ -89,12 +91,12 @@ function produceBlog(event) {
                 <img src="${currentBlog.photo}" alt="${currentBlog.title}" style="width:100%">
                 <section class="w3-container">
                   <h3><b>${currentBlog.title}</b></h3>
-                  <h5>${currentBlog.description}, <span class="w3-opacity">${currentBlog.date}</span></h5>
-                  <h5><span class="w3-opacity">${currentBlog.author}</span></h5>
+                  <span class="w3-opacity">${currentBlog.date}</span></h5>
+                 
                 </section>
     
                 <section class="w3-container">
-                  <p>${currentBlog.content}</p>
+                  <p>${currentBlog.body}</p>
                 </section>
               </div>
               <hr>
@@ -122,39 +124,5 @@ produceBlog({
 
 previousEl.addEventListener("click", produceBlog)
 nextEl.addEventListener("click", produceBlog)
-
-// Loop over keys in the database
-// for (let key in BlogDatabase) {
-//     // Get a reference to the array of objects
-//     const currentBlog = BlogDatabase[key]
-
-//     // Loop over the array of objects
-//     for (let i = 0; i < currentBlog.length; i++) {
-//         // Current item in the array
-//         let item = currentBlog[i]
-
-//         blogEntry.innerHTML += `
-//         <!-- Blog entries -->
-//         <article class="w3-col l8 s12">
-//           <!-- Blog entry -->
-//           <div class="w3-card-4 w3-margin w3-white ${key}">
-//             <img src="${item.photo}" alt="${item.title}" style="width:100%">
-//             <section class="w3-container">
-//               <h3><b>${item.title}</b></h3>
-//               <h5>${item.description}, <span class="w3-opacity">${item.date}</span></h5>
-//               <h5><span class="w3-opacity">${item.author}</span></h5>
-//             </section>
-
-//             <section class="w3-container">
-//               <p>${item.content}</p>
-//             </section>
-//           </div>
-//           <hr>
-//         </article>
-//         `
-//     }//end for loop
-// }//end For In loop
-
-
 
 
