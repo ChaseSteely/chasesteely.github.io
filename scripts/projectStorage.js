@@ -25,7 +25,7 @@ const projectObjectFactory = function (title, photo, entry, date, team, url, ...
     })
 }
 
-const personalSite = projectObjectFactory("My Personal Website", "<img src='img/personalSite.jpg' alt='Javascript and HTML books'>", 
+const personalSite = projectObjectFactory("My Personal Website", "<img src='../img/personalSite.jpg' alt='Javascript and HTML books'>", 
 "My first project at NSS is designing my website. As I learn new techniques in HTML, CSS, and JavaScript, or receive tickets for new requirements through Github, I update the code.",
 "10/25/2017",
 "Chase Steely",
@@ -33,7 +33,7 @@ const personalSite = projectObjectFactory("My Personal Website", "<img src='img/
 "HTML", " CSS", " Javascript"
 )
 
-const fairyBnB = projectObjectFactory("FairyBnB", "<img src='img/packages.jpg' alt=''>",
+const fairyBnB = projectObjectFactory("FairyBnB", "<img src='../img/packages.jpg' alt=''>",
 "This project was to build a company website with a 4-5 member team over a two-day sprint. After an excellent planning phase, we settled on a company name - FairyBnB - and what services our company would provide - tours to mythical lands. Our group, the Distracted Llamas, went to the whiteboard to lay out our vision for the site. Each of us was responsible for creating a database, using JSON.stringify() and localStorage.setItem() to store the data in local storage. We would control and display our databases through JSON.parse(localStorage.getItem()), looping through our data, and writing all the HTML with innerHTML +=. I was responsible for the Packages and Souvenirs page.",
 "10/18/2017",
 "Chase Steely - Jenna Solis - Jason Figueroa - Kimme Bird",
@@ -41,7 +41,7 @@ const fairyBnB = projectObjectFactory("FairyBnB", "<img src='img/packages.jpg' a
 "HTML", " CSS", " Javascript"
 )
 
-const firstSprint = projectObjectFactory("bækur", "<img src='img/book.jpg' alt=''>", 
+const firstSprint = projectObjectFactory("bækur", "<img src='../img/book.jpg' alt=''>", 
 "Our first sprint of Nashville Software School Cohort 22 was to build a company website using Javascript to populate our HTML, utilizing a database we created that we stored in local storage.  I was tasked to design and code the index.html and a page that used a database of blog articles; very similar to what I am doing on this page.",
 "10/13/2017",
 "Chase Steely - Leah Duvic - Deanna Vickers - Tyler Bowman",

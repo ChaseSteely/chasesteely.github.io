@@ -6,7 +6,7 @@
     <title>Blog Creator</title>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="./styles/blog-form.css">
+    <link rel="stylesheet" href="../styles/blog-form.css">
 </head>
 
 <body>
@@ -53,30 +53,12 @@
         <textarea name="blogForm__body"></textarea>
 
         <label>Date</label>
-        <textarea name="blogForm__date"></textarea>
+        <input type="text" name="blogForm__date">
 
         <div id="blogForm__save">
             <button id="blogForm__saveButton">Save Blog</button>
         </div>
     </section>
-
-    <footer id="footer" class="footer opacityOff">
-        <div class="up">
-            <a href="#navBar" class="button">
-                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
-        </div>
-        <nav class="bottomNav">
-            <a href="https://www.flickr.com/photos/mchasesteely/" target="_blank">
-                <i class="fa fa-flickr pointer button right"></i>
-            </a>
-            <a href="https://github.com/ChaseSteely" target="_blank">
-                <i class="fa fa-github pointer button right"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/chasesteely/" target="_blank">
-                <i class="fa fa-linkedin pointer button"></i>
-            </a>
-        </nav>
-    </footer>
 
     <script src="../scripts/blogStorage.js"></script>
 </body>
