@@ -25,77 +25,77 @@
 // const BlogDatabase = JSON.parse(localStorage.getItem("blogStore"));
 
 {
-  // Get the database from local storage, or empty object if null
-  const BlogDatabase = JSON.parse(
-    localStorage.getItem("BlogDatabase")
-  ) || {}
+    // Get the database from local storage, or empty object if null
+    const BlogDatabase = JSON.parse(
+        localStorage.getItem("BlogDatabase")
+    ) || {};
 
-  // Create `articles` key if it doesn't exist
-  BlogDatabase.articles = BlogDatabase.articles || []
+    // Create `articles` key if it doesn't exist
+    BlogDatabase.articles = BlogDatabase.articles || [];
 
-  // Sort the articles by their `id` property, descending
-  BlogDatabase.articles.sort((p, n) => n.id - p.id)
+    // Sort the articles by their `id` property, descending
+    BlogDatabase.articles.sort((p, n) => n.id - p.id);
 
-  // Generator function definition
-  const idGenerator = function* (from) {
-    let id = 1
-    while (true) {
-      yield from + id
-      id++
-    }
-  }
+    // Generator function definition
+    const idGenerator = function* (from) {
+        let id = 1;
+        while (true) {
+            yield from + id;
+            id++;
+        }
+    };
 
-  const lastId = BlogDatabase.articles[0] || { id: 0 }
-  const blogUUIDGen = idGenerator(lastId.id)
+    const lastId = BlogDatabase.articles[0] || { id: 0, };
+    const blogUUIDGen = idGenerator(lastId.id);
 
-  // Factory function for new articles
-  const articleFactory = function (photo, title, body, date) {
-    return Object.create(null, {
-      "id": {
-        value: blogUUIDGen.next().value,
-        enumerable: true
-      },
-      "photo": {
-        value: photo,
-        enumerable: true
-      },
-      "title": {
-        value: title,
-        enumerable: true
-      },
-      "body": {
-        value: body,
-        enumerable: true
-      },
-      "date": {
-        value: date,
-        enumerable: true
-      }
-    })
-  }
+    // Factory function for new articles
+    const articleFactory = function (photo, title, body, date) {
+        return Object.create(null, {
+            "id": {
+                value: blogUUIDGen.next().value,
+                enumerable: true,
+            },
+            "photo": {
+                value: photo,
+                enumerable: true,
+            },
+            "title": {
+                value: title,
+                enumerable: true,
+            },
+            "body": {
+                value: body,
+                enumerable: true,
+            },
+            "date": {
+                value: date,
+                enumerable: true,
+            },
+        });
+    };
 
-  // Add click event listener to the save button
-  const saveButtonEl = document.getElementById("blogForm__saveButton")
-    .addEventListener("click", event => {
+    // Add click event listener to the save button
+    const saveButtonEl = document.getElementById("blogForm__saveButton").
+        addEventListener("click", event => {
 
-      // Create a new article object
-      const newArticle = articleFactory(
-        document.querySelector("input[name='blogForm__photo']").value,
-        document.querySelector("input[name='blogForm__title']").value,
-        document.querySelector("textarea[name='blogForm__body']").value,
-        document.querySelector("input[name='blogForm__date']").value
-      )
+            // Create a new article object
+            const newArticle = articleFactory(
+                document.querySelector("input[name='blogForm__photo']").value,
+                document.querySelector("input[name='blogForm__title']").value,
+                document.querySelector("textarea[name='blogForm__body']").value,
+                document.querySelector("input[name='blogForm__date']").value
+            );
 
 
 
-      // Add new article to array
-      BlogDatabase.articles.push(newArticle)
+            // Add new article to array
+            BlogDatabase.articles.push(newArticle);
 
-      // Sort the articles by their `id` property, descending
-      BlogDatabase.articles.sort((p, n) => n.id - p.id)
+            // Sort the articles by their `id` property, descending
+            BlogDatabase.articles.sort((p, n) => n.id - p.id);
 
-      // Serialize and store database
-      localStorage.setItem("BlogDatabase", JSON.stringify(BlogDatabase))
-    })
+            // Serialize and store database
+            localStorage.setItem("BlogDatabase", JSON.stringify(BlogDatabase));
+        });
 
 }

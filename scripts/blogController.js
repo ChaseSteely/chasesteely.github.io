@@ -1,90 +1,90 @@
 
-const BlogDatabase = JSON.parse(localStorage.getItem("BlogDatabase"))
-const totalItems = BlogDatabase.articles.length
-const itemsPerPage = 5
-const numberOfPages = Math.ceil(totalItems / itemsPerPage)
-const paginationEl = document.getElementById("blogPaginator")
+const BlogDatabase = JSON.parse(localStorage.getItem("BlogDatabase"));
+const totalItems = BlogDatabase.articles.length;
+const itemsPerPage = 5;
+const numberOfPages = Math.ceil(totalItems / itemsPerPage);
+const paginationEl = document.getElementById("blogPaginator");
 const blogEntry = document.getElementById("blogs");
 
 
 
-let paginationString = "<ul>"
-paginationString += "<a id='previous' href='#'>&lt;</a>"
+let paginationString = "<ul>";
+paginationString += "<a id='previous' href='#'>&lt;</a>";
 for (var i = 0; i < numberOfPages; i++) {
-  paginationString += ` <li><a class="blogPage page-${i + 1}" href="#">${i + 1}</a></li>`
+    paginationString += ` <li><a class="blogPage page-${i + 1}" href="#">${i + 1}</a></li>`;
 }
-paginationString += " <a id='next' class='page-2' href='#'>&gt;</a>"
-paginationString += "</ul>"
+paginationString += " <a id='next' class='page-2' href='#'>&gt;</a>";
+paginationString += "</ul>";
 
 // Update the DOM with the unordered list we just built
-paginationEl.innerHTML = paginationString
+paginationEl.innerHTML = paginationString;
 
 // Store references to the next and previous arrows we just added
-const previousEl = document.getElementById("previous")
-const nextEl = document.getElementById("next")
+const previousEl = document.getElementById("previous");
+const nextEl = document.getElementById("next");
 
 /*
     Function that will be invoked each time the user clicks
     on one of the pagination links at the bottom of the page
 */
 function produceBlog(event) {
-  // Clear the blogs first before displaying the new ones
-  blogEntry.innerHTML = ""
+    // Clear the blogs first before displaying the new ones
+    blogEntry.innerHTML = "";
 
-  // Which number did the user click on?
+    // Which number did the user click on?
 
-  // Convert DOMTokenList to Array
-  const classes = event.target.classList
-  const classArray = Array.from(classes)
+    // Convert DOMTokenList to Array
+    const classes = event.target.classList;
+    const classArray = Array.from(classes);
 
-  // Find the class we want that match pattern "page-n"
-  const targetClass = classArray.find(clazz => {
-    if (clazz.startsWith("page-")) return clazz
-  })
+    // Find the class we want that match pattern "page-n"
+    const targetClass = classArray.find(clazz => {
+        if (clazz.startsWith("page-")) return clazz;
+    });
 
-  // Split the class into an array on the dash
-  const pageNumberArray = targetClass.split("-")
+    // Split the class into an array on the dash
+    const pageNumberArray = targetClass.split("-");
 
-  // Get the actual page number ["page", "1"]
-  const actualPageNumber = pageNumberArray[1]
+    // Get the actual page number ["page", "1"]
+    const actualPageNumber = pageNumberArray[1];
 
-  // Convert the string into an integer
-  const integerPageNumber = parseInt(actualPageNumber)
+    // Convert the string into an integer
+    const integerPageNumber = parseInt(actualPageNumber);
 
-  const pageNumber = parseInt(
-    Array.from(event.target.classList)
-      .find(clazz => {
-        if (clazz.startsWith("page-")) return clazz
-      })
-      .split("-")[1]
-  )
+    const pageNumber = parseInt(
+        Array.from(event.target.classList).
+            find(clazz => {
+                if (clazz.startsWith("page-")) return clazz;
+            }).
+            split("-")[1]
+    );
 
-  // Change the class name of the previous arrow
-  if ((pageNumber - 1) === 0) {
-    previousEl.style.display = "none"
-  } else {
-    previousEl.style.display = "inline"
-    previousEl.className = `page-${pageNumber - 1}`
-  }
+    // Change the class name of the previous arrow
+    if ((pageNumber - 1) === 0) {
+        previousEl.style.display = "none";
+    } else {
+        previousEl.style.display = "inline";
+        previousEl.className = `page-${pageNumber - 1}`;
+    }
 
-  // Change the class name of the next arrow
-  if ((pageNumber + 1) > numberOfPages) {
-    nextEl.style.display = "none"
-  } else {
-    nextEl.style.display = "inline"
-    nextEl.className = `page-${pageNumber + 1}`
-  }
+    // Change the class name of the next arrow
+    if ((pageNumber + 1) > numberOfPages) {
+        nextEl.style.display = "none";
+    } else {
+        nextEl.style.display = "inline";
+        nextEl.className = `page-${pageNumber + 1}`;
+    }
 
-  // Determine which items to display by slicing the array
-  const itemsToDisplay = BlogDatabase.articles.slice(
-    (pageNumber - 1) * itemsPerPage,
-    pageNumber * itemsPerPage
-  )
+    // Determine which items to display by slicing the array
+    const itemsToDisplay = BlogDatabase.articles.slice(
+        (pageNumber - 1) * itemsPerPage,
+        pageNumber * itemsPerPage
+    );
 
-  // Display a <section> representation of each data object
-  for (let i = 0; i < itemsToDisplay.length; i++) {
-    let currentBlog = itemsToDisplay[i];
-    blogEntry.innerHTML += `
+    // Display a <section> representation of each data object
+    for (let i = 0; i < itemsToDisplay.length; i++) {
+        let currentBlog = itemsToDisplay[i];
+        blogEntry.innerHTML += `
             <article class="w3-col l8 s12">
               <!-- Blog entry -->
               <div class="w3-card-4 w3-margin w3-white">
@@ -101,28 +101,28 @@ function produceBlog(event) {
               </div>
               <hr>
             </article>
-    `
-  }
+    `;
+    }
 }
 
 // Get the array of pagination anchor tags we added to the DOM
-const blogLinks = document.getElementsByClassName("blogPage")
+const blogLinks = document.getElementsByClassName("blogPage");
 
 // Add event listeners to each <a> element in the pagination
 for (let j = 0; j < blogLinks.length; j++) {
-  let thisBlogEntry = blogLinks[j];
-  thisBlogEntry.addEventListener("click", produceBlog, false);
+    let thisBlogEntry = blogLinks[j];
+    thisBlogEntry.addEventListener("click", produceBlog, false);
 }
 
 produceBlog({
-  "target": {
-    "classList": ["page-1"]
-  }
-})
+    "target": {
+        "classList": ["page-1",],
+    },
+});
 
 
 
-previousEl.addEventListener("click", produceBlog)
-nextEl.addEventListener("click", produceBlog)
+previousEl.addEventListener("click", produceBlog);
+nextEl.addEventListener("click", produceBlog);
 
 

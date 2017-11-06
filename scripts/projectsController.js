@@ -4,12 +4,12 @@ const projectEl = document.getElementById("projects");
 // Loop over keys in the database
 for (let key in ProjectDatabase) {
     // Get a reference to the array of objects
-    const thisProject = ProjectDatabase[key]
+    const thisProject = ProjectDatabase[key];
 
     // Loop over the array of objects
     for (let i = 0; i < thisProject.length; i++) {
         // Current item in the array
-        let item = thisProject[i]
+        let item = thisProject[i];
 
         projectEl.innerHTML += `
         <article class="project_article">
@@ -21,6 +21,6 @@ for (let key in ProjectDatabase) {
                 <h6>${item.published}</h6>
                 <p>${item.body}</p>
         </article>
-        `
+        `;
     }//end for loop
 }//end For In loop
