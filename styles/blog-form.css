@@ -1,0 +1,23 @@
+h1 { 
+    text-align: center;
+}
+
+#blogForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#blogForm__save {
+    padding-top: 15px;
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+}
+
+label {
+    font-size: 1.2em;
+}
