@@ -27,7 +27,10 @@
     <link href="img/bartender.ico" rel="shortcut icon" type="image/x-icon">
     <link href="styles/normalize.css" rel="stylesheet" type="text/css">
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
-    <link href="styles/index.css" rel="stylesheet" type="text/css">
+    <link href="styles/blog.css" rel="stylesheet" type="text/css">
+    <link href="styles/contact.css" rel="stylesheet" type="text/css">
+    <link href="styles/projects.css" rel="stylesheet" type="text/css">
+    <link href="styles/resume.css" rel="stylesheet" type="text/css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108434151-1"></script>
     <script>
@@ -41,7 +44,7 @@
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
+                    new Date().getTime(), event: 'gtm.js'
             }); var f = d.getElementsByTagName(s)[0],
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
@@ -66,29 +69,29 @@
                         <i class="fa fa-user"></i> ABOUT</a>
                 </li>
                 <li>
-                    <a href="contact/index.html" class="navItem button pointer">
+                    <a href="#" class="navItem button pointer">
                         <i class="fa fa-envelope"></i> CONTACT</a>
                 </li>
                 <li>
-                    <a href="blog/index.html" class="navItem button pointer">
+                    <a href="#" class="navItem button pointer">
                         <i class="fa fa-pencil"></i> BLOG</a>
                 </li>
                 <li>
-                    <a href="projects/index.html" class="navItem button pointer">
+                    <a href="#" class="navItem button pointer">
                         <i class="fa fa-code"></i> PROJECTS</a>
                 </li>
                 <li>
-                    <a href="resume/index.html" class="navItem button pointer">
+                    <a href="#" class="navItem button pointer">
                         <i class="fa fa-briefcase"></i> RESUME</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <section class="imageOne" id="home">
-        <section class="name">
+    <div class="imageOne" id="home">
+        <div class="name">
             <span class="nameBlock center">CHASE STEELY</span>
-        </section>
-    </section>
+        </div>
+    </div>
     <main class="content" id="about">
         <h3 class="center">ABOUT ME</h3>
         <p class="center">
@@ -113,8 +116,68 @@
             <br> -Web application development and design
             <br> -Application deployment and management
             <br> -Skills necessary to join a development team as a junior developer</p>
-
     </main>
+
+    <section id="contacts" class="hidden">
+        <div class="imageTwo">
+            <div class="name">
+                <span class="nameBlock center">CONTACT ME</span>
+            </div>
+        </div>
+
+        <main class="contact content">
+            <h3 class="center">CONTACT INFO</h3>
+            <section id="social-media-links" class="contactInfo center">
+            </section>
+        </main>
+    </section>
+
+    <section id="projectPage" class="hidden">
+        <div class="imageFour">
+            <div class="name">
+                <span class="nameBlock center">PROJECTS</span>
+            </div>
+        </div>
+
+        <main id="projects" class="content">
+
+        </main>
+    </section>
+    <section id="resumePage" class="hidden">
+        <div class="imageThree">
+            <div class="name">
+                <span class="nameBlock center">RESUME</span>
+            </div>
+        </div>
+        <main>
+            <h1 class="content">WORK HISTORY</h1>
+            <section id="resume" class="content">
+            </section>
+            <h1 class="content">EDUCATION</h1>
+            <section id="edu" class="content">
+            </section>
+        </main>
+    </section>
+    <section id="blogPage" class="hidden">
+        <section class="imageFive" id="blog">
+            <section class="name">
+                <span class="nameBlock center">BLOG</span>
+            </section>
+        </section>
+        <!-- content -->
+        <div class="w3-content" style="max-width:1400px">
+            <!-- Grid -->
+            <div class="w3-row">
+                <article id="blogs" class="content">
+                </article>
+                <!-- END GRID -->
+            </div>
+            <br>
+            <nav id="blogPaginator" class="paginator center">
+            </nav>
+            <!-- END content -->
+        </div>
+    </section>
 
     <footer id="footer" class="footer opacityOff">
         <div class="up">
