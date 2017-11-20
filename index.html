@@ -59,40 +59,14 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header id="header" class="top">
-        <nav id="navBar">
-            <ul class="nav">
-                <li>
-                    <a href="#" class="navItem button pointer">HOME</a>
-                </li>
-                <li>
-                    <a href="#about" class="navItem button pointer">
-                        <i class="fa fa-user"></i> ABOUT</a>
-                </li>
-                <li>
-                    <a href="#" class="navItem button pointer">
-                        <i class="fa fa-envelope"></i> CONTACT</a>
-                </li>
-                <li>
-                    <a href="#" class="navItem button pointer">
-                        <i class="fa fa-pencil"></i> BLOG</a>
-                </li>
-                <li>
-                    <a href="#" class="navItem button pointer">
-                        <i class="fa fa-code"></i> PROJECTS</a>
-                </li>
-                <li>
-                    <a href="#" class="navItem button pointer">
-                        <i class="fa fa-briefcase"></i> RESUME</a>
-                </li>
-            </ul>
-        </nav>
+        <nav id="navBar"></nav>
     </header>
     <div class="imageOne" id="home">
         <div class="name">
             <span class="nameBlock center">CHASE STEELY</span>
         </div>
     </div>
-    <main class="content" id="about">
+    <section class="content" id="about">
         <h3 class="center">ABOUT ME</h3>
         <p class="center">
             <em>Student at Nashville Software School. Full-Stack Software Developer.</em>
@@ -116,19 +90,18 @@
             <br> -Web application development and design
             <br> -Application deployment and management
             <br> -Skills necessary to join a development team as a junior developer</p>
-    </main>
+    </section>
+
+    <div id="contactImg" class="imageTwo hidden">
+        <div class="name">
+            <span class="nameBlock center">CONTACT ME</span>
+        </div>
+    </div>
 
     <section id="contacts" class="hidden">
-        <div class="imageTwo">
-            <div class="name">
-                <span class="nameBlock center">CONTACT ME</span>
-            </div>
-        </div>
-
         <main class="contact content">
             <h3 class="center">CONTACT INFO</h3>
-            <section id="social-media-links" class="contactInfo center">
-            </section>
+            <section id="social-media-links" class="contactInfo center"></section>
         </main>
     </section>
 
@@ -138,24 +111,19 @@
                 <span class="nameBlock center">PROJECTS</span>
             </div>
         </div>
-
-        <main id="projects" class="content">
-
-        </main>
+        <main id="projects" class="content"></main>
     </section>
-    <section id="resumePage" class="hidden">
-        <div class="imageThree">
-            <div class="name">
-                <span class="nameBlock center">RESUME</span>
-            </div>
+    <div id="resumeImg" class="imageThree hidden">
+        <div class="name">
+            <span class="nameBlock center">RESUME</span>
         </div>
+    </div>
+    <section id="resumePage" class="hidden">
         <main>
             <h1 class="content">WORK HISTORY</h1>
-            <section id="resume" class="content">
-            </section>
+            <section id="resume" class="content"></section>
             <h1 class="content">EDUCATION</h1>
-            <section id="edu" class="content">
-            </section>
+            <section id="edu" class="content"></section>
         </main>
     </section>
     <section id="blogPage" class="hidden">
@@ -168,34 +136,16 @@
         <div class="w3-content" style="max-width:1400px">
             <!-- Grid -->
             <div class="w3-row">
-                <article id="blogs" class="content">
-                </article>
+                <article id="blogs" class="content"></article>
                 <!-- END GRID -->
             </div>
             <br>
-            <nav id="blogPaginator" class="paginator center">
-            </nav>
+            <nav id="blogPaginator" class="paginator center"></nav>
             <!-- END content -->
         </div>
     </section>
 
-    <footer id="footer" class="footer opacityOff">
-        <div class="up">
-            <a href="#navBar" class="button">
-                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
-        </div>
-        <nav class="bottomNav">
-            <a href="https://www.flickr.com/photos/mchasesteely/" target="_blank">
-                <i class="fa fa-flickr pointer button right"></i>
-            </a>
-            <a href="https://github.com/ChaseSteely" target="_blank">
-                <i class="fa fa-github pointer button right"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/chasesteely/" target="_blank">
-                <i class="fa fa-linkedin pointer button"></i>
-            </a>
-        </nav>
-    </footer>
+    <footer id="footer" class="footer opacityOff"></footer>
     <script src="./build/bundle.js"></script>
 </body>
 

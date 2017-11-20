@@ -1,5 +1,5 @@
 const idGenerator = require("./idGenerator")
-const contactStorage = require("./contacts/contactStorage")
-// const map = require("./map")
+const populateDom = require("./populateDom")
+const showPage = require("./showPage")
 
-contactStorage()
+// const map = require("./map")
