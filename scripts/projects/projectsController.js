@@ -1,26 +1,28 @@
-const ProjectDatabase = JSON.parse(localStorage.getItem("storeProject"));
-const projectEl = document.getElementById("projects");
+const db = require("../databaseJson")
 
-// Loop over keys in the database
-for (let key in ProjectDatabase) {
-    // Get a reference to the array of objects
-    const thisProject = ProjectDatabase[key];
 
-    // Loop over the array of objects
-    for (let i = 0; i < thisProject.length; i++) {
-        // Current item in the array
-        let item = thisProject[i];
+function projectsWriter() {
 
-        projectEl.innerHTML += `
-        <article class="project_article">
-            <picture>${item.image}</picture>
-                <h2>${item.title}</h2>
-                <h3>${item.teammates}</h3>
-                <h4><a href="http://${item.website}" target="_blank">${item.website}</a></h4>
-                <h5>${item.techniques}</h5>
-                <h6>${item.published}</h6>
-                <p>${item.body}</p>
-        </article>
-        `;
-    }//end for loop
-}//end For In loop
+    db.load(writeProjects)
+
+    function writeProjects(db) {
+        const projectEl = $("#projects");
+        const pData = db.projects
+        projectHTML = ""
+        pData.forEach(p => {
+            projectHTML += `
+            <article class="project_article">
+                <picture>${p.image}</picture>
+                    <h2>${p.title}</h2>
+                    <h3>${p.teammates}</h3>
+                    <h4><a href="http://${p.website}" target="_blank">${p.website}</a></h4>
+                    <h5>${p.techniques} </h5>
+                    <h6>${p.published}</h6>
+                    <p>${p.body}</p>
+            </article>
+            `
+        })
+        projectEl.html(projectHTML)
+    }
+}
+module.exports = projectsWriter

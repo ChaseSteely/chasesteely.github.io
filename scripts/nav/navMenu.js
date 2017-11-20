@@ -20,7 +20,7 @@ const populateNav = () => {
                     <i class="fa fa-pencil"></i> BLOG</a>
             </li>
             <li>
-                <a href="#" class="navItem button pointer">
+                <a href="#" id="projectLink" class="navItem button pointer">
                     <i class="fa fa-code"></i> PROJECTS</a>
             </li>
             <li>

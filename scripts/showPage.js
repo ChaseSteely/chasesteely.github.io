@@ -1,5 +1,6 @@
 const navMenu = require("./nav/navMenu")
 const contactStorage = require("./contacts/contactStorage")
+const projectsController = require("./projects/projectsController")
 const resume = require("./resume/resume")
 
 const showClickedPage = event => {
@@ -31,6 +32,15 @@ const showClickedPage = event => {
     if (event.target.id !== "resumeLink") {
         document.getElementById("resumeImg").classList.add("hidden")
         document.getElementById("resumePage").classList.add("hidden")
+    }
+    if (event.target.id === "projectLink") {
+        projectsController()
+        document.getElementById("projectImg").classList.remove("hidden")
+        document.getElementById("projectPage").classList.remove("hidden")
+    }
+    if (event.target.id !== "projectLink") {
+        document.getElementById("projectImg").classList.add("hidden")
+        document.getElementById("projectPage").classList.add("hidden")
     }
 }
 module.exports = showClickedPage

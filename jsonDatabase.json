@@ -24,5 +24,21 @@
             "major": "Web Developer Bootcamp: C# & .NET Track",
             "description": "The Web Developer Bootcamp is a six-month, full-time program. The curriculum teaches the skills and technologies required to become a full-stack software developer.  The core technologies that students use in this course are the three standard languages of the web: HTML, CSS and JavaScript. This course prepares students to work and build the front-end code associated with websites, web apps and hybrid mobile applications."
         }
+    ],
+    "projects": [
+        {
+            "title": "bækur",
+            "image": "<img src='../img/book.jpg' alt=''>",
+            "body": "Our first sprint of Nashville Software School Cohort 22 was to build a company website using Javascript to populate our HTML, utilizing a database we created that we stored in local storage.  I was tasked to design and code the index.html and a page that used a database of blog articles; very similar to what I am doing on this page.",
+            "published": "10/13/2017",
+            "teammates": "Chase Steely - Leah Duvic - Deanna Vickers - Tyler Bowman",
+            "website": "github.com/nss-day-cohort-22/company-website-malicious-cobras",
+            "techniques": 
+                [
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ]
+        }
     ]
 }
