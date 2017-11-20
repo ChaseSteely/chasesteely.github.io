@@ -21,7 +21,7 @@ const writeContacts = () => {
 
     const ContactDatabase = JSON.parse(localStorage.getItem("contactInformation"));
     const contactElement = document.getElementById("social-media-links");
-
+    contactElement.innerHTML = ""
     // Loop over keys in the database
     for (let key in ContactDatabase) {
         // Get a reference to the array of objects

@@ -1,8 +1,6 @@
 const navMenu = require("./nav/navMenu")
 const contactStorage = require("./contacts/contactStorage")
 const resume = require("./resume/resume")
-contactStorage()
-resume()
 
 const showClickedPage = event => {
     const checkId = event.target.id
@@ -17,6 +15,7 @@ const showClickedPage = event => {
         document.getElementById("home").classList.remove("hidden")
     }
     if (event.target.id === "contactLink") {
+        contactStorage()
         document.getElementById("contactImg").classList.remove("hidden")
         document.getElementById("contacts").classList.remove("hidden")
     }
@@ -25,6 +24,7 @@ const showClickedPage = event => {
         document.getElementById("contacts").classList.add("hidden")
     }
     if (event.target.id === "resumeLink") {
+        resume()
         document.getElementById("resumeImg").classList.remove("hidden")
         document.getElementById("resumePage").classList.remove("hidden")
     }

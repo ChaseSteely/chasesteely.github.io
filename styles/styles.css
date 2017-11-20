@@ -96,7 +96,8 @@ body, h3 {
 
  .content {
     max-width: 980px;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 60px;
     padding-bottom: 60px;
  } 
@@ -189,4 +190,9 @@ opacity: 1;
 .hidden {
     display: none;
 }
+
+main, #about.content {
+    padding-bottom: 50px;
+}
+
 
