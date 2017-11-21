@@ -28,6 +28,7 @@
     <link href="styles/normalize.css" rel="stylesheet" type="text/css">
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
     <link href="styles/blog.css" rel="stylesheet" type="text/css">
+    <link href="styles/blog-form.css" rel="stylesheet" type="text/css">
     <link href="styles/contact.css" rel="stylesheet" type="text/css">
     <link href="styles/projects.css" rel="stylesheet" type="text/css">
     <link href="styles/resume.css" rel="stylesheet" type="text/css">
@@ -40,24 +41,10 @@
 
         gtag('config', 'UA-108434151-1');
     </script>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-57SKV4Z');</script>
-    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57SKV4Z" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
     <header id="header" class="top">
         <nav id="navBar"></nav>
     </header>
@@ -113,7 +100,7 @@
     <section id="projectPage" class="hidden">
         <main id="projects" class="content"></main>
     </section>
-    
+
     <div id="resumeImg" class="imageThree hidden">
         <div class="name">
             <span class="nameBlock center">RESUME</span>
@@ -127,25 +114,48 @@
             <section id="edu" class="content"></section>
         </main>
     </section>
-    <section id="blogPage" class="hidden">
-        <section class="imageFive" id="blog">
-            <section class="name">
-                <span class="nameBlock center">BLOG</span>
-            </section>
+    <section class="imageFive hidden" id="blogImg">
+        <section class="name">
+            <span class="nameBlock center">BLOG</span>
         </section>
+    </section>
+    <section id="blogPage" class="hidden">
+        <div id="blogForm__new">
+            <button id="blogForm!newButton" class="button">NEW BLOG</button>
+        </div>
+        Filter: <input type="text" name="articleFilter">
         <!-- content -->
         <div class="w3-content" style="max-width:1400px">
             <!-- Grid -->
             <div class="w3-row">
-                <article id="blogs" class="content"></article>
+                <article id="blogs" class="content blog__articles"></article>
                 <!-- END GRID -->
             </div>
             <br>
-            <nav id="blogPaginator" class="paginator center"></nav>
+            <nav id="blogPaginator" class="blog__paginator paginator center"></nav>
             <!-- END content -->
         </div>
     </section>
-
+<section id="admin" class="hidden">
+    <h1>Create Blog Articles</h1>
+        <section id="blogForm">
+            <label>Photo</label>
+            <input type="text" name="blogForm__photo">
+    
+            <label>Title</label>
+            <input type="text" name="blogForm__title">
+    
+            <label>Contents</label>
+            <textarea name="blogForm__body"></textarea>
+    
+            <label>Date</label>
+            <input type="text" name="blogForm__date">
+    
+            <div id="blogForm__save">
+                <button id="blogForm__saveButton">Save Blog</button>
+            </div>
+        </section>
+    </section>
     <footer id="footer" class="footer opacityOff"></footer>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="./build/bundle.js"></script>

@@ -16,7 +16,7 @@ const populateNav = () => {
                     <i class="fa fa-envelope"></i> CONTACT</a>
             </li>
             <li>
-                <a href="#" class="navItem button pointer">
+                <a href="#" id="blogLink" class="navItem button pointer">
                     <i class="fa fa-pencil"></i> BLOG</a>
             </li>
             <li>
