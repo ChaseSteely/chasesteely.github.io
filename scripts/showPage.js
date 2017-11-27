@@ -3,9 +3,9 @@ const contactStorage = require("./contacts/contactStorage")
 const projectsController = require("./projects/projectsController")
 const resume = require("./resume/resume")
 const blogController = require("./blog/blogController")
+const showAdmin = require("./blog/showAdmin")
 
 const showClickedPage = event => {
-    const checkId = event.target.id
     if (event.target.id !== "homeLink") {
         document.getElementById("about").classList.add("hidden")
         document.getElementById("about").classList.remove("content")
@@ -52,10 +52,5 @@ const showClickedPage = event => {
         document.getElementById("blogImg").classList.add("hidden")
         document.getElementById("blogPage").classList.add("hidden")
     }
-    // $("#blogForm!newButton").click(function() {
-    //     if(this.id === "blogForm!newButton") {
-    //         document.getElementById("admin").classList.remove("hidden")
-    //     }
-    // })
 }
 module.exports = showClickedPage

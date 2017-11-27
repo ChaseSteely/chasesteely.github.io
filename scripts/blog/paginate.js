@@ -1,3 +1,5 @@
+//Thanks Steve Brownlee for the awesome Paginate Code.
+
 const paginate = () => {
     const itemsPerPage = 5
     let items = null

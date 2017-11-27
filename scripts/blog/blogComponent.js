@@ -14,7 +14,7 @@ const component = Object.create(null, {
               <section class="w3-container">
                 <p>${article.content}</p>
               </section>
-              <section class="article__tags">${article.tags.join(", ")}</section >
+              <section class="article__tags">${article.tags.join(", ")}</section>
             </div>
             <hr>
           </article>
